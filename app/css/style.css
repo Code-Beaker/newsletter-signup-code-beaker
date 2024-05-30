@@ -15,14 +15,16 @@ main {
 
 .container {
   background-color: var(--neutral-white);
-  padding: 2rem;
-  display: flex;
+  padding: 1.5rem;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 2rem;
-  max-width: 52.5rem;
+  max-width: 55rem;
 }
 
 .container-hide {
-  display: none !important;
+  display: none;
   /* scale: 0; */
 }
 
@@ -31,14 +33,12 @@ main {
 }
 
 .form__textSection {
-  margin-right: 2rem;
-  padding-left: 1rem;
-  padding-block: 2rem;
+  padding: 2rem;
 }
 
 .form__title {
   font-size: 2.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--neutral-dark-slate-grey);
   font-family: var(--font-bold);
 }
@@ -135,6 +135,10 @@ form {
   cursor: pointer;
   transition: 100ms ease-in-out;
   background-color: var(--neutral-dark-slate-grey);
+}
+
+.dismissButton {
+  margin-top: 2rem;
 }
 
 .form__submitButton:hover,
