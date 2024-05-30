@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div id="formContainer" class="container__cols">
+          <section class="form__textSection">
+            <h1 class="form__title">Stay updated!</h1>
+            <p class="form__text">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="form__list">
+              <li class="form__list-item">
+                Product discovery and building what matters
+              </li>
+              <li class="form__list-item">
+                Measuring to ensure updates are a success
+              </li>
+              <li class="form__list-item">And much more!</li>
+            </ul>
+            <form id="form" action="index.html" novalidate>
+              <div class="email__label-and-status">
+                <label for="emailInput">Email address</label>
+                <p class="emailStatus" id="emailStatusText">
+                  Please enter a valid email address
+                </p>
+              </div>
+              <input
+                class="form__emailInput"
+                type="email"
+                placeholder="email@company.com"
+                name="email"
+                id="emailInput"
+              />
+              <button class="form__submitButton" id="submitBtn" type="submit">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </section>
+          <section class="form__imageSection">
+            <picture>
+              <source
+                media="(min-width: 50rem)"
+                srcset="assets/images/illustration-sign-up-desktop.svg"
+              />
+              <img
+                class="right__image"
+                src="assets/images/illustration-sign-up-mobile.svg"
+                alt="illustration"
+              />
+            </picture>
+          </section>
+        </div>
+      </div>
+      <!-- modal -->
+      <div id="modal" class="modal">
+        <img
+          src="assets/images/icon-success.svg"
+          alt=""
+          class="modal__checkmark"
+        />
+        <h1 class="modal__heading">Thanks for subscribing!</h1>
+        <p class="modal__text">
+          A confirmation email has been sent to
+          <span id="emailAddressText"></span>. Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+        <button id="dismissBtn" class="dismissButton">Dismiss message</button>
+      </div>
+    </main>
+    <!-- Validator -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
