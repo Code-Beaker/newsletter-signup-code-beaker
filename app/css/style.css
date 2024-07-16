@@ -59,6 +59,7 @@ main {
 }
 
 .status-error {
+  font-style: italic;
   color: var(--primary-tomato);
 }
 
